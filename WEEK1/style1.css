@@ -1,0 +1,82 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 8px;
+    grid-auto-rows: minmax(90px, auto);
+    grid-template-rows: max-content;
+    
+  }
+  .one {
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+    background-color:rgb(0, 162, 255);
+    border:3px solid gray;
+  }
+  .two { 
+    grid-column: 7;
+    grid-row: 1 / 2;
+    
+  }
+  
+  .three {
+    grid-column: 1 / 8;
+    grid-row: 2;
+    background-color:rgb(0, 162, 255);
+    border:3px solid gray;
+  }
+  
+.four {
+    grid-column: 1 / 5;
+    grid-row: 3 / 6;
+    background-color:rgb(0, 162, 255);
+    border:3px solid gray;
+    justify-content: center;
+  }
+  .five {
+    grid-column: 5 / 8;
+    grid-row: 3 / 6;
+    background-color:rgb(0, 162, 255);
+    border:3px solid gray;
+  }
+  .six {
+    grid-column: 1 / 5;
+    grid-row: 6 / 8;
+    background-color:rgb(0, 162, 255);
+    border:3px solid gray;
+  }
+  .seven {
+    grid-column: 5 / 8;
+    grid-row: 6 / 8;
+    background-color:rgb(0, 162, 255);
+    border:3px solid gray;
+
+  }
+
+  h4{
+      text-align:center;
+      margin-block-start: 0.5em;
+      font-family: Arial, Helvetica, sans-serif;
+    
+  }
+
+  li{
+      padding-right: 5px;
+      margin-block-start: 0.2em;
+      margin-left: 0px;
+
+  }
+
+  p {
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: justify;
+      margin-block-start: 0.5em;
+     
+
+  }
+
+  h3 {
+      padding-left: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+      
+  }
