@@ -24,7 +24,7 @@ mkdir –p cemal/these/folders/are/just/for/fun
 
 
 
-3. How do I append a message to a file, without a newline character, so the output would be:
+3. How do I append a message to a file, without a newline character, so the output would be: 
 first message
 second message 
 
