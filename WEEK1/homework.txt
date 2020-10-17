@@ -1,0 +1,44 @@
+Using the CLI, create a plain text file (.txt) that contains the commands necessary to answer the following questions:
+
+1. How do I create a hidden file or folder? How do I display it in the CLI?
+
+To create a hidden file or folder in CLI, we can add a ‘.’ (DOT) in front of the name of the folder or file. 
+
+mkdir .hack (to create a hidden folder)
+
+or
+
+touch .message (to create a hidden file)
+
+To display it in the CLI we simply type ‘ls –alF’.
+
+[ls –a] shows files starting with a ‘.’
+
+[l] shows full list with size, permissions and number of files in the directory 
+
+[F] is to add / for directories..
+
+2. How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
+
+mkdir –p cemal/these/folders/are/just/for/fun
+
+
+
+3. How do I append a message to a file, without a newline character, so the output would be:
+first message
+second message 
+
+In the working folder;
+
+touch message.txt
+vim message.txt
+
+This directs us to Vim.
+Here we can create as many lines as we want without needing a new line character, so the output would be;
+
+cat message.txt
+
+first message
+second message
+
+
