@@ -74,12 +74,12 @@ p::first-line {
   color: blue;
 }
 /*floats Desktop view*/
+
 #grid-floats li:first-child{
     float:left;
-    width:40%; 
-     
+    width:40%;      
 }
-
+  
 #grid-floats li:nth-child(2){
     float:left;
     
@@ -128,14 +128,18 @@ p::first-line {
 }
 /*floats mobile phone view*/
 @media (max-width:600px){
-    #grid-floats li:first-child{ /*Normally I shouldn't need this but without this part it didn't work*/
-       width:100%; 
-     
-}
+    
     #grid-floats .grid-item{
         width:100%;
+        margin-right:10px;
     }
-
+    #grid-floats li:first-child{ /*Normally I shouldn't need this but without this part it didn't work*/
+        width:100%; 
+    }
+    
+    #grid-floats li:nth-child(12){ /*Normally I shouldn't need this but without this part it didn't work*/
+        width:100%; 
+ }
 }
 /*grid floats tablet view */
 @media screen /*https://websiteedu.com/media-queries-for-mobile-and-tablets.../*/
@@ -146,7 +150,7 @@ p::first-line {
 *{
     box-sizing: border-box;
  }
-    
+
 #grid-floats li:first-child{
     width:45%;
     float:left;
@@ -223,9 +227,9 @@ p::first-line {
     clear:right;
     width:30%;
     float:right;  
+}/*It works perfectly with toggle device toolbar*/
 }
-}
-#grid-flex .grid-item{
+#grid-flex .grid-item{ /*to clear the second part from the first part*/
     clear:both;
 }
 h2{
@@ -346,7 +350,7 @@ h3{
 @media (max-width:600px){
     
     #grid-flex .grid-item{
-        flex:1;
+        flex-basis:100%;
     }
 }    
 
@@ -365,10 +369,15 @@ h3{
     flex-direction: column;
     justify-content:center;
     width:45%;
-}
+        
+    }
     #grid-flex li:nth-child(2){
         flex-direction: column;
         width:45%;
         text-align:center;
+        
+         
+     
 }
+   
 }  
