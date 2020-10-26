@@ -131,7 +131,6 @@ p::first-line {
     
     #grid-floats .grid-item{
         width:100%;
-        margin-right:10px;
     }
     #grid-floats li:first-child{ /*Normally I shouldn't need this but without this part it didn't work*/
         width:100%; 
@@ -142,14 +141,10 @@ p::first-line {
  }
 }
 /*grid floats tablet view */
-@media screen /*https://websiteedu.com/media-queries-for-mobile-and-tablets.../*/
-    and (min-device-width: 600px) 
-    and (max-device-width: 1024px) 
+@media only screen/*https://websiteedu.com/media-queries-for-mobile-and-tablets.../*/
+    and (min-width: 600px) 
+    and (max-width: 1024px) 
 {
-
-*{
-    box-sizing: border-box;
- }
 
 #grid-floats li:first-child{
     width:45%;
@@ -163,14 +158,14 @@ p::first-line {
 #grid-floats li:nth-child(3){
     clear:left;
     float:left;
-    width:30%;
+    width:28%;
     margin-top: 15px;
 }
 
 #grid-floats li:nth-child(4){
     clear:right;
     float: left;
-    width:30%;
+    width:28%;
     margin-left: 25px;
     padding-left: 0;
     margin-top: 15px;
@@ -179,53 +174,53 @@ p::first-line {
     clear:left;
     clear:right;
     float:right;
-    width:30%;
+    width:28%;
 }
 #grid-floats li:nth-child(6){
     clear:both;
-    width:30%;
+    width:28%;
     float:left;  
 }
 #grid-floats li:nth-child(7){
     clear:right;
-    width:30%;
+    width:28%;
     float:left;  
 }
 #grid-floats li:nth-child(8){
     clear:right;
-    width:30%;
+    width:28%;
     float:right;  
 }
 #grid-floats li:nth-child(9){
     clear:both;
-    width:30%;
+    width:28%;
     float:left;  
 }
 #grid-floats li:nth-child(10){
     clear:left;
     clear:right;
-    width:30%;
+    width:28%;
     float:left;  
 }
 #grid-floats li:nth-child(11){
     clear:right;
-    width:30%;
+    width:28%;
     float:right; 
 }
 #grid-floats li:nth-child(12){
     clear:both;
-    width:30%;
+    width:28%;
     float:left;  
 }
 #grid-floats li:nth-child(13){
     clear:left;
     clear:right;
-    width:30%;
+    width:28%;
     float:left;  
 }
 #grid-floats li:nth-child(14){
     clear:right;
-    width:30%;
+    width:28%;
     float:right;  
 }/*It works perfectly with toggle device toolbar*/
 }
@@ -306,7 +301,7 @@ h3{
     resize: both; /*to let the user resize horizontally and vertically*/
     overflow:auto;
     text-align:center;
-    width:25%;
+    width:24%;
 }   
 
 #grid-flex img { 
@@ -375,5 +370,9 @@ h3{
         flex-direction: column;
         width:45%;
         text-align:center;
+        
+         
+     
 }
+   
 }  
