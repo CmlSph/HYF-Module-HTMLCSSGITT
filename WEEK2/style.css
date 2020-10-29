@@ -1,10 +1,8 @@
 *{
     margin:0px;
-    padding:0px;
-    box-sizing: border-box;
+    padding:0px;    
 }
-/*https://designmodo.com/font-face/#how-to-use-font-face*/
-@font-face {
+@font-face {/*https://designmodo.com/font-face/#how-to-use-font-face*/
     font-family: DeliciousRoman;
     src: url('http://www.font-face.com/fonts/delicious/Delicious-Roman.otf');
 }
@@ -12,18 +10,20 @@
     font-family: 'Turret Road', cursive;
     src: url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@700&display=swap');
 }
-@font-face {
-    font-family: 'Vampiro One', cursive;
-    src: url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap');
-}
 body{
     font-family: 'Vampiro One', cursive;
-    width:90%;
+    box-sizing:border-box;/*feedback*/
+    width:98%;
     margin-left: auto;
     margin-right: auto;
     background-image:url(images/background-image.jpg)
 }
-/*Grids*/
+img{
+    width:250px;/*feedback*/
+}
+ul{
+    list-style:none;/*feedback*/
+}
 h1, h2{
     color:white;
     text-align: center;
@@ -31,206 +31,94 @@ h1, h2{
     border:3px solid blue;
     padding-top: 5px;
 }
-
 h1{
     background-color:black;
     margin-top:15px;
     font-family: DeliciousRoman, Helvetica, Arial, sans-serif;/*https://designmodo.com/font-face/#how-to-use-font-face*/
     transition: color;
 }
-
 h1:hover {
   background-color: red; 
 }
-/*Grid with floats*/
 h2{
     background-color:gray;
     margin-top:25px;
     font-family: 'Turret Road', cursive; /*https://fonts.google.com/specimen/Turret+Road?sidebar.open=true&selection.family=Turret+Road:wght@700*/
     transition: color;
 }
-
 h2:hover{
     background-color: red;
 }
-
-#grid-floats .grid-item{/*includes h3 image and p tags*/
+#grid-floats .grid-item{/*includes h3, image and p tags*/
     width:23%;
     height: 40%;
-    /*border:3px solid black;*/
     margin-left: 20px;
-    margin-top: 5px;
-    list-style: none;
-    /*background-image: url(images/divbackground.jpg);*/
     margin-top:15px;
     text-align:center;
     float:left;
 }
-p::first-letter {
+p::first-letter { /*to make the first letter bigger*/
   font-size: 200%;
   color: blue;
 }
-p::first-line {
+p::first-line {/*to make the firs line blue*/
   color: blue;
 }
 /*floats Desktop view*/
-
+#grid-floats{
+    overflow:auto;/*overflow:auto on parent div clears floats*//*feedback*/
+}
+#grid-floats.grid-item{ /*feedback*/
+    display:inline-block;
+    box-sizing: border-box;
+    width:25%;
+    padding:1rem;
+    float:left;
+}
+#grid-floats.grid-item:first-child{/*feedback*/
+    width:50%;
+    float:left;
+}
+#grid-floats.grid-item:nth-child(3n+4){/*feedback*/
+    clear:both;
+}
 #grid-floats li:first-child{
     float:left;
     width:40%;      
 }
-  
-#grid-floats li:nth-child(2){
-    float:left;
-    
+#grid-floats li:nth-child(12){/*Something is preventing this child behave normally!*/
+    clear:right;
+    clear:left;
 }
-
-#grid-floats li:nth-child(3){
-    float:right;
-}
-#grid-floats li:nth-child(4){
-    clear:both;
-    float:left;
-}
-#grid-floats li:nth-child(5){
-    float:left;
-}
-
-#grid-floats li:nth-child(6){
-    float:left;
-}
-#grid-floats li:nth-child(7){
-    float:left;
-    
-}
-#grid-floats li:nth-child(8){
-    clear:both;
-    float:left;
-}
-#grid-floats li:nth-child(9){
-    float:left;
-}
-#grid-floats li:nth-child(10){
-    float:left;
-}
-#grid-floats li:nth-child(11){
-    float:left;
-}
-#grid-floats li:nth-child(12){
-    clear:both;
-    float:left;
-}
-#grid-floats li:nth-child(13){
-    float:left;
-}
-#grid-floats li:nth-child(14){
-    float:left;
-}
-/*floats mobile phone view*/
-@media (max-width:600px){
+@media (max-width:600px){/*floats mobile phone view begins*/
     
     #grid-floats .grid-item{
         width:100%;
     }
-    #grid-floats li:first-child{ /*Normally I shouldn't need this but without this part it didn't work*/
+    #grid-floats li:first-child{ 
         width:100%; 
-    }
-    
-    #grid-floats li:nth-child(12){ /*Normally I shouldn't need this but without this part it didn't work*/
-        width:100%; 
- }
+    }    
 }
-/*grid floats tablet view */
-@media only screen/*https://websiteedu.com/media-queries-for-mobile-and-tablets.../*/
-    and (min-width: 600px) 
-    and (max-width: 1024px) 
+@media only screen and (min-width: 600px) and (max-width: 1024px) /*grid floats tablet view */
 {
-
-#grid-floats li:first-child{
-    width:45%;
-    float:left;
-    text-align: center;
-}   
-#grid-floats li:nth-child(2){
-    width:45%;
-    float:right;
-}
-#grid-floats li:nth-child(3){
-    clear:left;
-    float:left;
-    width:28%;
-    margin-top: 15px;
-}
-
-#grid-floats li:nth-child(4){
-    clear:right;
-    float: left;
-    width:28%;
-    margin-left: 25px;
-    padding-left: 0;
-    margin-top: 15px;
-}
-#grid-floats li:nth-child(5){
-    clear:left;
-    clear:right;
-    float:right;
-    width:28%;
-}
-#grid-floats li:nth-child(6){
-    clear:both;
-    width:28%;
-    float:left;  
-}
-#grid-floats li:nth-child(7){
-    clear:right;
-    width:28%;
-    float:left;  
-}
-#grid-floats li:nth-child(8){
-    clear:right;
-    width:28%;
-    float:right;  
-}
-#grid-floats li:nth-child(9){
-    clear:both;
-    width:28%;
-    float:left;  
-}
-#grid-floats li:nth-child(10){
-    clear:left;
-    clear:right;
-    width:28%;
-    float:left;  
-}
-#grid-floats li:nth-child(11){
-    clear:right;
-    width:28%;
-    float:right; 
-}
-#grid-floats li:nth-child(12){
-    clear:both;
-    width:28%;
-    float:left;  
-}
-#grid-floats li:nth-child(13){
-    clear:left;
-    clear:right;
-    width:28%;
-    float:left;  
-}
-#grid-floats li:nth-child(14){
-    clear:right;
-    width:28%;
-    float:right;  
-}/*It works perfectly with toggle device toolbar*/
-}
-#grid-flex .grid-item{ /*to clear the second part from the first part*/
-    clear:both;
+    #grid-floats .grid-item{
+        width:28%;
+    }
+    #grid-floats li:first-child{/*feedback*/
+        width:45%;
+        float:left;
+    }
+    #grid-floats li:nth-child(2){/*feedback*/
+        width:45%;
+        clear:right;
+    }
+    #grid-floats li:nth-child(3n+3){/*feedback*/
+        clear:both;
+    }    
 }
 h2{
     clear:both;
 }
-
 h3{
     text-align:center;
     color:blue;
@@ -238,30 +126,23 @@ h3{
 #grid-floats img {  
     max-width: 50%;  
     height: auto; 
-    justify-content: left;
     display:inline;
     margin-left:auto;
     margin-right:auto;
-    margin:10px;
-    vertical-align:middle;
-    text-align:center;
-    margin-left: 0;
     background-color: red;
     animation-name: example;
     animation-duration: 3s;
     background-image:url(images/sky.jpg)
 }
-
 @keyframes example {    /*https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp*/
     from {max-width: 50%;}
     to {max-width: 75%;}
-  }
+}
 #grid-floats img:hover{ 
     transform: scale(1.5); /* (150% zoom) */
     border-radius:100px;
     border:1px solid red;
 }
-
 #grid-floats p{
     padding-left: 10px;
     text-align: justify;
@@ -269,41 +150,31 @@ h3{
     color:black;
     line-height: 1.5;
 }
-#grid-floats p:hover{
-    transform: scale(1.08); /* (150% zoom) */
-    background-color:black;
+/*#grid-floats p:hover{ /*I had to remove this because it was pushing the following line below. */
+    /*transform: scale(1.08); /* (150% zoom) */
+    /*background-color:black;
     color:white;
     border:1px solid red;
     opacity: 0.5;
-    padding: 15px 25px 15px 25px;
-    
-    
-}
-/*Desktop View*/
+    padding: 15px 25px;    
+}*/
 
-/*the start of grid-flex*/
-#grid-flex{
-    
+#grid-flex{/*the start of grid-flex*//*Desktop View*/
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    align-content:stretch;
     height:250px;
-    margin-left: 25px; 
-       
+    margin-left: 25px;       
 }
-
 #grid-flex .grid-item{
     border-bottom: 1px solid red;
     margin-top: 10px;
     padding-bottom: 10px;
-    list-style: none;
     resize: both; /*to let the user resize horizontally and vertically*/
     overflow:auto;
     text-align:center;
     width:24%;
 }   
-
 #grid-flex img { 
     display: flex;
     align-items: flex-start;
@@ -313,66 +184,34 @@ h3{
     display:inline;
     margin-left:auto;
     margin-right:auto;
-    vertical-align:middle;
-    text-align:center;
-    margin-left: 0;
     background-image:url(images/sky.jpg)
 }
-
-
 #grid-flex img:hover{ 
     transform: scale(1.5); /* (150% zoom) */
 }
-
 /*flexbox desktop view*/
 #grid-flex li:first-child{
-    width:45%;
-    
+    width:45%;   
 }
-
 #grid-flex li:nth-child(2){
     width:25%;
     margin-left: 10px;
 }
-
 #grid-flex li:nth-child(3){
     width:25%;
     margin-left: 15px;    
 }
-   
-
-/*flexbox mobile phone view*/
-@media (max-width:600px){
-    
+@media (max-width:600px){/*flexbox mobile phone view*/   
     #grid-flex .grid-item{
         flex-basis:100%;
     }
-}    
-
-/*flexbox tablet view*/ 
-@media screen /*https://websiteedu.com/media-queries-for-mobile-and-tablets.../*/
-    and (min-device-width: 600px) 
-    and (max-device-width: 1024px) 
+}     
+@media screen and (min-device-width: 600px) and (max-device-width: 1024px)/*flexbox tablet view*/
 {
-
 #grid-flex .grid-item{
     width:33%;
-}
-   
-   
-#grid-flex li:first-child{
-    flex-direction: column;
-    justify-content:center;
-    width:45%;
-        
-    }
-    #grid-flex li:nth-child(2){
-        flex-direction: column;
-        width:45%;
-        text-align:center;
-        
-         
-     
-}
-   
 }  
+#grid-flex li:first-child, #grid-flex li:nth-child(2){    
+    width:45%;
+}
+}
