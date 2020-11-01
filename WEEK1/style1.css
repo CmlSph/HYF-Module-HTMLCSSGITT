@@ -14,8 +14,7 @@
   .general_info {
     grid-column: 1 / 7;
     grid-row: 1 / 2;
-    background-color:rgb(0, 162, 255);
-    border:3px solid gray;
+    
   }
   .picture { 
     grid-column: 7;
@@ -27,34 +26,29 @@
   .pro_summary {
     grid-column: 1 / 8;
     grid-row: 2;
-    background-color:rgb(0, 162, 255);
-    border:3px solid gray;
+    
   }
   
 .education {
     grid-column: 1 / 5;
     grid-row: 3 / 6;
-    background-color:rgb(0, 162, 255);
-    border:3px solid gray;
+    
     justify-content: center;
   }
   .work_experience {
     grid-column: 5 / 8;
     grid-row: 3 / 6;
-    background-color:rgb(0, 162, 255);
-    border:3px solid gray;
-  }
+      }
+
   .skills {
     grid-column: 1 / 5;
     grid-row: 6 / 8;
-    background-color:rgb(0, 162, 255);
-    border:3px solid gray;
+    
   }
   .courses {
     grid-column: 5 / 8;
     grid-row: 6 / 8;
-    background-color:rgb(0, 162, 255);
-    border:3px solid gray;
+    
 
   }
 
